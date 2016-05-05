@@ -1,2 +1,8 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1><%=@user.name%></h1>
+
+<p>Email: <%=@user.email%></p>
+<p>Bio: <%=@user.bio%></p>
+<%=image_tag "#{@user.picture_url}" %>
+
+<%= link_to "Edit #{@user.name}", :edit_user %>
+<%= link_to "Back to Users", :users %>
