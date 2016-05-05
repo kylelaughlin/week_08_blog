@@ -1,13 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'user/index'
-
-  get 'user/new'
-
-  get 'user/show'
-
-  get 'user/edit'
-
   resources :user
 
 
