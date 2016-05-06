@@ -1,0 +1,27 @@
+<%= form_for @user do |f| %>
+  <% if f.object.errors.any? %>
+    <% f.object.errors.full_messages.each do |e| %>
+      <p><%=e%></p>
+    <% end %>
+  <%end%>
+
+  <div>
+    <%= f.label      :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label      :email %>
+    <%= f.text_field :email %>
+  </div>
+  <div>
+    <%= f.label      :picture_url %>
+    <%= f.text_field :picture_url %>
+  </div>
+  <div>
+    <%= f.label      :bio %>
+    <%= f.text_area  :bio %>
+  </div>
+  <div>
+  <%= f.submit %>
+</div>
+<% end %>
