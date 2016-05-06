@@ -15,3 +15,19 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+
+.container {
+  width: 100%;
+  margin:0;
+  padding:0;
+}
+
+.blogify {
+  color: #ffffff;
+  letter-spacing: 4px;
+  font-weight: 100;
+  font-size: 4em;
+  padding:3% 0;
+  margin:0;
+}

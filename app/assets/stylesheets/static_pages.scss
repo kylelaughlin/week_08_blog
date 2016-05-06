@@ -1,3 +1,45 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+nav li {
+  letter-spacing: 3px;
+  text-decoration: none;
+  display:inline;
+  font-weight: 300;
+  padding:0 2%;
+}
+
+nav {
+  background-color: #636363;
+  text-align: center;
+}
+
+nav a:link, nav a:visited {
+  color:#f7f8f8;
+}
+
+nav a:hover {
+  color: #43a7de;
+  text-decoration: none;
+}
+
+header {
+  background-color: #43a7de;
+}
+
+.pad_top_2 {
+  padding-top: 2%
+}
+
+.pad_right_2 {
+  padding-right: 2%
+}
+
+.pad_bottom_2 {
+  padding-bottom: 2%
+}
+
+.pad_left_2 {
+  padding-left: 2%
+}
