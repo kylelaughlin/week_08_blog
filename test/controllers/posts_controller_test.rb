@@ -1,6 +1,11 @@
 require 'test_helper'
 
 class PostsControllerTest < ActionController::TestCase
+
+  setup do
+    @post = posts(:one)
+  end
+
   test "should get index" do
     get :index
     assert_response :success
@@ -12,12 +17,12 @@ class PostsControllerTest < ActionController::TestCase
   end
 
   test "should get edit" do
-    get :edit
+    get :edit, id: @post
     assert_response :success
   end
 
   test "should get show" do
-    get :show
+    get :show, id: @post
     assert_response :success
   end
 
