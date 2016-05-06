@@ -2,12 +2,32 @@
 
   <div class="row">
     <div class="col-md-4 text-center">
-      <h5>Exisitng User?</h5>
+      <h4>Exisitng User?</h4>
+      <%= link_to "Select User", :users, class: "btn user_button" %>
 
-      <h5>New User?</h5>
+      <h4>New User?</h4>
+      <%= link_to "Create New User", :new_user, class: "btn user_button" %>
     </div>
     <div class="col-md-8 text-center">
-      <h4>posts</h4>
+      <% @posts.each do |post| %>
+        <div>
+          <div class="row">
+            <div class="col-sx-8">
+              <p><%=post.title%><p>
+            </div>
+            <div class="col-xs-4">
+              <div class="row">
+                <div class="col-xs-8">
+                  <p><%=post.user.name%></p>
+                </div>
+                <div class="col-xs-4">
+                  <%= image_tag("#{post.user.picture_url}") %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
 
