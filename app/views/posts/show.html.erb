@@ -1,2 +1,13 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<div>
+  <h1><%=@post.title%></h1>
+</div>
+
+<div>
+  <p>content: <%=@post.content%></p>
+  <%=image_tag "#{@post.picture_url}" %>
+</div>
+
+<div>
+  <%= link_to "Edit #{@post.title}", :edit_post %>
+  <%= link_to "Back to Posts", :posts %>
+</div>

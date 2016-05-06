@@ -8,7 +8,7 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
-  def edit
+  def create
     @post = Post.new(post_params)
 
     if @post.save
@@ -20,6 +20,9 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+  end
+
+  def edit
   end
 
   private
