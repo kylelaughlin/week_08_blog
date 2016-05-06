@@ -1,3 +1,5 @@
 <h1>Edit <%=@user.name%></h1>
 
 <%= render "layouts/user_form" %>
+
+<%= link_to "Delete #{@user.name}", :user, method: :delete %>

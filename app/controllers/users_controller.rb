@@ -35,6 +35,13 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    flash.now[:alert] = "User Destroyed"
+    redirect_to :users
+  end
+
   private
   def user_params
     params.require(:user).permit(:name, :email, :picture_url, :bio)
