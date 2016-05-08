@@ -5,8 +5,10 @@ class PostsController < ApplicationController
   end
 
   def new
-    byebug
     @post = Post.new
+    if !params[:id].nil?
+      @user = User.find(params[:id])
+    end
   end
 
   def create

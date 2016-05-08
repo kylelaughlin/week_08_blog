@@ -1,9 +1,14 @@
 <%= form_for @post do |f| %>
 
   <div>
-    <%= f.label      :user %>
-    <%= select("post", "user_id", User.all.collect {|u| [ u.name, u.id ] },
-               {:include_blank => true}) %>
+    <% if user.nil? %>
+      <%= f.label      :user %>
+      <%= select("post", "user_id", User.all.collect {|u| [ u.name, u.id ] },
+                 {:include_blank => true}) %>
+    <% else %>
+      <p>User: <%= user.name %></p>
+      <%= f.hidden_field :user_id, :value => user.id %>
+    <% end %>
   </div>
   <div>
     <%= f.label      :title %>
