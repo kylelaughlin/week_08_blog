@@ -6,6 +6,7 @@
       </div>
       <div class="col-md-8">
         <h4 class="text-center"><%=@user.name%>'s Posts</h4>
+        <%= link_to "Write New Post", {:controller => "posts", :action => "new", :id => @user.id} %>
         <% @posts.each do |post| %>
         <%= render partial: "layouts/post_summary", locals: {post: post} %>
         <% end %>
