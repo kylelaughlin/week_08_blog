@@ -1,7 +1,12 @@
 <div class="bio-wrapper">
   <h2><%=@user.name%></h2>
   <div class="bio-image-wrapper">
-    <%= image_tag "#{@user.picture_url}", class: "bio-image" %>
+    <% if @user.picture_url.blank? %>
+      <%= image_tag "https://cdn2.iconfinder.com/data/icons/users-2/512/User_16-512.png",
+                    class: "bio-image" %>
+    <% else %>
+      <%= image_tag "#{@user.picture_url}", class: "bio-image" %>
+    <% end %>
   </div>
   <div class="row">
     <div class="col-xs-2 text-right">

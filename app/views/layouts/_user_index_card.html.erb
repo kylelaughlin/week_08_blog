@@ -1,0 +1,13 @@
+<div class="user-card">
+  <div class="user-card-image-wrapper">
+    <% if user.picture_url.blank? %>
+      <%= link_to image_tag("https://cdn2.iconfinder.com/data/icons/users-2/512/User_16-512.png",
+          class: "thumbnail-image"), user_path(user.id) %>
+    <% else %>
+      <%= link_to image_tag("#{user.picture_url}", class: "thumbnail-image"),
+          user_path(user.id) %>
+    <% end %>
+  </div>
+  <p><%= link_to "#{user.name}", user_path(user.id), class: "summary-title" %></p>
+  <p><%=user.email%>
+</div>
