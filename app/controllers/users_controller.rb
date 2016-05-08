@@ -29,7 +29,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
-      redirect_to :user,  flash[:notice] = "User Updated."
+      redirect_to :user,   notice: "User Updated."
     else
       flash.now[:alert] = "Update not saved."
       render :edit
