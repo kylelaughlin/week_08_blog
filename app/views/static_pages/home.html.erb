@@ -13,7 +13,7 @@
           <div class="post-summary">
             <div class="row">
               <div class="col-xs-8">
-                <p class="summary-title"><%=post.title%></p>
+                <%= link_to "#{post.title}", post_path(post), class: "summary-title"%>
               </div>
               <div class="col-xs-4">
                 <div class="thumbnail-wrapper">

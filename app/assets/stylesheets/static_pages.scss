@@ -5,6 +5,7 @@
 .content-wrapper {
   margin-left: 30px;
   margin-right: 30px;
+  padding: 10px;
 }
 
 nav li {
@@ -62,7 +63,9 @@ header {
 
 .post-summary {
   border-style: solid;
-  border-color: #f7f8f8;
+  border-color: #F1F1F1;
+  border-width: 1px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   width: 75%;
   margin: auto;
   margin-top: 20px;
@@ -72,6 +75,10 @@ header {
 .summary-title {
   color: #43a7de;
   font-size: 2em;
+}
+
+.summary-title:hover {
+  text-decoration: none;
 }
 
 .thumbnail-wrapper {
