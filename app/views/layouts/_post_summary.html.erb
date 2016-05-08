@@ -1,0 +1,18 @@
+<div class="post-summary">
+  <div class="row">
+    <div class="col-xs-8">
+      <%= link_to "#{post.title}", post_path(post), class: "summary-title"%>
+    </div>
+    <div class="col-xs-4">
+      <div class="thumbnail-wrapper">
+        <%= image_tag "#{post.user.picture_url}", class: "thumbnail-image" %>
+      </div>
+      <p class="thumbnail-name"><%=post.user.name%></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <p class="summary-content"><%=truncate(post.content, length: 200)%></p>
+    </div>
+  </div>
+</div>
