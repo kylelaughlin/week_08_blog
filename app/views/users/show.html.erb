@@ -1,8 +1,15 @@
-<h1><%=@user.name%></h1>
-
-<p>Email: <%=@user.email%></p>
-<p>Bio: <%=@user.bio%></p>
-<%=image_tag "#{@user.picture_url}" %>
-
-<%= link_to "Edit #{@user.name}", :edit_user %>
-<%= link_to "Back to Users", :users %>
+<div class="container">
+  <div class="content-wrapper">
+    <div class="row">
+      <div class="col-md-4">
+        <%= render partial: "layouts/bio", locals: {user: @user} %>
+      </div>
+      <div class="col-md-8">
+        <h4 class="text-center"><%=@user.name%>'s Posts</h4>
+        <% @posts.each do |post| %>
+        <%= render partial: "layouts/post_summary", locals: {post: post} %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

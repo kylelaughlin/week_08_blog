@@ -1,0 +1,22 @@
+<div class="bio-wrapper">
+  <h2><%=@user.name%></h2>
+  <div class="bio-image-wrapper">
+    <%= image_tag "#{@user.picture_url}", class: "bio-image" %>
+  </div>
+  <div class="row">
+    <div class="col-xs-2 text-right">
+      <p>Bio:</p>
+    </div>
+    <div class="col-xs-10">
+      <p><%=@user.bio%></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-2 text-right">
+      <p>Email:</p>
+    </div>
+    <div class="col-xs-10">
+      <p><%=@user.email%></p>
+    </div>
+  </div>
+</div>

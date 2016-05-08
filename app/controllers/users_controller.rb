@@ -19,7 +19,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id]).includes(:posts)
+    @user = User.find(params[:id])
+    @posts = Post.where(user: @user)
   end
 
   def edit

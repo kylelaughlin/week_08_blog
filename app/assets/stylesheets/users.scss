@@ -1,3 +1,20 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.bio-wrapper {
+  border-style: solid;
+  border-color: #F1F1F1;
+  border-width: 1px;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.bio-image-wrapper {
+  width: 100%;
+  margin-bottom:10px;
+}
+
+.bio-image {
+  width: 95%;
+}
