@@ -1,13 +1,24 @@
-<div>
-  <h1><%=@post.title%></h1>
+<div class="row">
+  <div class="col-xs-12 text-center show-posts-wrapper">
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <div class="text-centers show-posts-title">
+          <h1><%=@post.title%></h1>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cos-xs-12 show-posts-content">
+        <p><%=@post.content%></p>
+        <%=image_tag "#{@post.picture_url}", class: " show-posts-picture"%>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div>
-  <p><%=@post.content%></p>
-  <%=image_tag "#{@post.picture_url}" %>
-</div>
-
-<div>
-  <%= link_to "Edit #{@post.title}", :edit_post %>
-  <%= link_to "Back to Posts", :posts %>
+<div class="row">
+  <div class="col-xs-12 text-center pad_top_2 pad_bottom_2">
+    <%= link_to "Edit #{@post.title}", :edit_post, class: "btn show-posts-button" %>
+    <%= link_to "Back to Posts", :posts, class: "btn show-posts-button" %>
+  </div>
 </div>

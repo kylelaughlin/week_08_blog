@@ -1,3 +1,46 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.row {
+  padding:0px;
+  margin:0px;
+}
+
+.col-xs-12 {
+  padding:0px;
+  margin:0px;
+}
+
+.show-posts-wrapper {
+  text-align: center;
+  margin:0, auto;
+  width: 90%;
+  background-color: #f7f8f8;
+}
+
+.show-posts-title {
+  color: #43a7de;
+  font-size:3em;
+}
+
+.show-posts-content {
+  padding:0 15%;
+  color: #636363;
+}
+
+.show-posts-picture {
+  width: 15%;
+  margin:2% 0;
+  border-style:solid;
+  border-width:3px;
+}
+
+.show-posts-button {
+  font-weight: 200;
+  color: #43a7de;
+  letter-spacing: 2px;
+  background-color: #636363;
+  padding: 2%;
+  border-radius: 3px;
+}
