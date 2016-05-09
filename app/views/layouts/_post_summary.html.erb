@@ -7,7 +7,7 @@
       <div class="thumbnail-wrapper">
         <%= image_tag "#{post.user.picture_url}", class: "thumbnail-image" %>
       </div>
-      <p class="thumbnail-name"><%=post.user.name%></p>
+      <%= link_to "#{post.user.name}", user_path(post.user), class: "thumbnail-name" %>
     </div>
   </div>
   <div class="row">
