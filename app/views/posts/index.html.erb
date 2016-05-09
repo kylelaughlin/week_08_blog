@@ -1,7 +1,10 @@
-<h1>Posts</h1>
-
-<% @posts.each do |post| %>
-  <p><%= link_to post.title, post_path(post.id) %></p>
-<% end %>
-
-<%= link_to "Create Blog Post", :new_post %>
+<div class="container">
+  <div class="posts-index-container">
+    <% @posts.each do |post| %>
+      <%= render partial: "layouts/post_summary", locals: {post: post} %>
+    <% end %>
+    <div class="text-center">
+      <%= link_to "Create Blog Post", :new_post, class: "btn user_button m-t-10" %>
+    </div>
+  </div>
+</div>
