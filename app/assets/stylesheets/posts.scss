@@ -2,7 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-<<<<<<< HEAD
 .posts-index-container {
   width: 75%;
   margin: auto;
@@ -10,7 +9,7 @@
 
 .m-t-10 {
   margin-top: 10px;
-=======
+}
 .row {
   padding:0px;
   margin:0px;
@@ -52,5 +51,13 @@
   background-color: #636363;
   padding: 2%;
   border-radius: 3px;
->>>>>>> new-users-form
+}
+
+.logo {
+  float: left;
+  padding:2% 0 0 2%;
+}
+
+.post-content-field {
+  width: 90%;
 }

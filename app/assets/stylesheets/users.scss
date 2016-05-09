@@ -43,7 +43,7 @@
 }
 
 .form-wrapper {
-  float:left;
+  margin:0 auto;
   width:60%;
   padding: 2% 3%;
   border-style: solid;
@@ -69,4 +69,8 @@
 
 .left {
   float:left;
+}
+
+.right {
+  float: right;
 }
