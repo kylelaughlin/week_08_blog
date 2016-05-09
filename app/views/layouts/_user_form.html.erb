@@ -1,27 +1,54 @@
-<%= form_for @user do |f| %>
-  <% if f.object.errors.any? %>
-    <% f.object.errors.full_messages.each do |e| %>
-      <p><%=e%></p>
-    <% end %>
-  <%end%>
-
-  <div>
-    <%= f.label      :name %>
-    <%= f.text_field :name %>
+<div class="row">
+  <div class="col-xs-12 text-center">
+    <h1>New User</h1>
   </div>
-  <div>
-    <%= f.label      :email %>
-    <%= f.text_field :email %>
-  </div>
-  <div>
-    <%= f.label      :picture_url %>
-    <%= f.text_field :picture_url %>
-  </div>
-  <div>
-    <%= f.label      :bio %>
-    <%= f.text_area  :bio %>
-  </div>
-  <div>
-  <%= f.submit %>
 </div>
+
+<div class="row">
+
+  <div class="col-xs-12">
+    <div class="col-xs-4 text-center button-wrapper">
+      <%= render "layouts/existing_or_new_user_buttons" %>
+    </div>
+    <div class="cos-xs-8">
+      <div class="form-wrapper">
+      <%= form_for @user do |f| %>
+        <% if f.object.errors.any? %>
+          <% f.object.errors.full_messages.each do |e| %>
+            <p><%=e%></p>
+          <% end %>
+        <%end%>
+
+        <div>
+          <%= f.label      :name %>
+        </br>
+          <%= f.text_field :name %>
+        </div>
+        </br>
+        <div>
+          <%= f.label      :email %>
+          </br>
+          <%= f.text_field :email %>
+        </div>
+        </br>
+        <div>
+          <%= f.label      :picture_url %>
+          </br>
+          <%= f.text_field :picture_url %>
+        </div>
+        </br>
+        <div>
+          <%= f.label      :bio %>
+          </br>
+          <%= f.text_area  :bio %>
+        </div>
+        <div class="submit_button">
+        <%= f.submit class: "btn submit-button"%>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
 <% end %>

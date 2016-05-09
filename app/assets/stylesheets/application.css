@@ -15,7 +15,7 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
-
+ /*@import "require rails_bootstrap_forms"*/
 
 .container {
   width: 100%;
@@ -26,7 +26,7 @@
 .blogify {
   color: #ffffff;
   letter-spacing: 4px;
-  font-weight: 100;
+  font-weight: 900;
   font-size: 4em;
   padding:3% 0;
   margin:0;

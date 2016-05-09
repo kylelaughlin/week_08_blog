@@ -41,3 +41,32 @@
   height: 225px;
   overflow: hidden;
 }
+
+.form-wrapper {
+  float:left;
+  width:60%;
+  padding: 2% 3%;
+  border-style: solid;
+  border-color: #43a7de;
+  border-width: thin;
+  border-radius: 15px;
+  background-color:#f7f8f8;
+}
+
+.submit-button {
+  font-weight: 200;
+  background-color: #43a7de;
+  letter-spacing: 2px;
+  color: #f7f8f8;
+  padding: 2%;
+  border-radius: 3px;
+}
+
+.buttton-wrapper {
+  float:left;
+  max-width: 90%;
+}
+
+.left {
+  float:left;
+}
